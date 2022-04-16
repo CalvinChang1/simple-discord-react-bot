@@ -1,0 +1,41 @@
+{
+  "name": "discord-starter-project",
+  "version": "1.0.0",
+  "description": "Sends reactions to a specified server channel",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint",
+    "build": "tsc -p .",
+    "start": "node ./build/src/index.js",
+    "dev": "nodemon -e js,ts --watch src --exec \"npm run build && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/unswengsoc/discord-starter-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/unswengsoc/discord-starter-project/issues"
+  },
+  "homepage": "https://gitlab.com/unswengsoc/discord-starter-project#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^14.11.2",
+    "gts": "^3.1.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.0.3"
+  }
+}
